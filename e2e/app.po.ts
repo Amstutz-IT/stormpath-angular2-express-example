@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Angular2ExpressExamplePage {
+export class Angular2ExpressStormpathExamplePage {
   navigateTo() {
     return browser.get('/');
   }

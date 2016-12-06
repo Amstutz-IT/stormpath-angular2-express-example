@@ -1,10 +1,10 @@
-import { Angular2ExpressExamplePage } from './app.po';
+import { Angular2ExpressStormpathExamplePage } from './app.po';
 
 describe('angular2-express-stormpath-example App', function() {
-  let page: Angular2ExpressExamplePage;
+  let page: Angular2ExpressStormpathExamplePage;
 
   beforeEach(() => {
-    page = new Angular2ExpressExamplePage();
+    page = new Angular2ExpressStormpathExamplePage();
   });
 
   it('should display message saying app works', () => {
