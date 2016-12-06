@@ -4,14 +4,24 @@
 /*global jasmine */
 var SpecReporter = require('jasmine-spec-reporter');
 
+chromeDriverPath = process.platform === 'win32' ? 'node_modules/webdriver-manager/selenium/chromedriver_2.22.exe' : 'node_modules/webdriver-manager/selenium/chromedriver_2.22';
+
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
     './e2e/**/*.e2e-spec.ts'
   ],
-  capabilities: {
-    'browserName': 'chrome'
-  },
+  multiCapabilities: [
+    {
+      'browserName': 'chrome',
+      'chromeOptions': {
+        'binary': '/usr/bin/google-chrome',
+        'args': [],
+        'extensions': []
+      }
+    }
+  ],
+  chromeDriver: chromeDriverPath,
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
