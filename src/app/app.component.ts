@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Account, Stormpath } from 'angular-stormpath';
 
@@ -20,7 +20,7 @@ import { Account, Stormpath } from 'angular-stormpath';
      <sp-authport></sp-authport>`,
   providers: [Stormpath]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app works!';
   private user$: Observable<Account | boolean>;
   private loggedIn$: Observable<boolean>;
