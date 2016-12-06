@@ -4,6 +4,8 @@ var express = require('express');
 var path = require('path');
 var stormpath = require('express-stormpath');
 
+require('dotenv').config(); // load environment variables from a .env file into process.env
+
 /**
  * Create the Express application.
  */
